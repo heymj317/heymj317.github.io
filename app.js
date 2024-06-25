@@ -2,7 +2,7 @@
 
 const $input = $("input[name='Search']");
 const $userform = $("#user-form");
-
+console.log("Running...");
 const noticePlaceholder = document.getElementById('liveNoticePlaceholder')
 
 const notice = (message, type) => {
