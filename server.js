@@ -8,7 +8,8 @@ const urlParser = require('urlParser');
 
 //GET ENVIRONMENT VARIABLES
 dotenv.config();
-const { DATABASE_URL, PORT, NODE_ENV } = process.env;
+const { DATABASE_URL, /*PORT,*/ NODE_ENV } = process.env;
+PORT = 5501;
 
 //SPIN UP EXPRESS
 const app = express();
