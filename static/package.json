@@ -1,0 +1,23 @@
+{
+  "name": "web-crawler",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jquery": "^3.6.0",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "htmlparser2": "^8.0.1",
+    "node-fetch": "^2.6.7",
+    "urlParser": "^0.1.2"
+  },
+  "description": ""
+}

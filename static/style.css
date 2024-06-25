@@ -1,0 +1,12 @@
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    margin-bottom: 10px; /* Margin bottom by footer height */
+  }
+
+  #footer {
+    position: relative;
+    background-color: darkslategrey;
+  }
