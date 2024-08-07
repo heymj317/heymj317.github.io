@@ -29,13 +29,16 @@ app.use(express.json()); //json parser
 
 //---GET REQUEST----
 app.get("/query/:qString", (req, res, next) => {
+    res.set({"Access-Control-Allow-Origin": req.headers.origin})
     const queryString = req.params.qString;
     const parsedUrl = urlParser(queryString);
     const host = parsedUrl[3];
+    console.log(`queryString: ${queryString}`);
+    console.log(`host: ${host}`);
 
     pool
-        .query(`SELECT * FROM links WHERE url LIKE '${host}%'`)
-        .then(data => {
+        .query(`SELECT * FROM links WHERE url LIKE '%${host}%'`)
+        .then(data => { 
             //CONFIRM TARGET IS IN DB AND RETURN
             if (data.rowCount > 0) {
                 res.send(data.rows);

@@ -37,7 +37,7 @@ $(function () {
 
         if (isValidUrl(userInput)) { //USER INPUT VALIDATION
             notice("Searching!", "success");
-            $.get(`localhost:5049/query/${searchTerm}`, (data) => { //RESTAPI QUERY (SEARCH DB FIRST, SCRAPE IF NEEDED)
+            $.get(`http://localhost:5049/query/${searchTerm}`, (data) => { //RESTAPI QUERY (SEARCH DB FIRST, SCRAPE IF NEEDED)
                 return data;
             }).then(data => { //
                 let paths = data;
