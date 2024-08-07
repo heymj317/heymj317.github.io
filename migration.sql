@@ -1,4 +1,4 @@
---garage database
+--webcrawlr database
 DROP TABLE IF EXISTS link_to_link;
 DROP TABLE IF EXISTS links;
 

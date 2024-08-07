@@ -8,7 +8,7 @@ const urlParser = require('urlParser');
 
 //GET ENVIRONMENT VARIABLES
 dotenv.config();
-const { DATABASE_URL, PORT, NODE_ENV } = process.env;
+const { DATABASE_URL, PORT, PGPASSWORD, PGUSER, NODE_ENV } = process.env;
 
 
 //SPIN UP EXPRESS
@@ -17,8 +17,10 @@ const app = express();
 //PSQL CONNECTION SETTINGS
 const pool = new pg.Pool({
     connectionString: DATABASE_URL,
+    password: PGPASSWORD,
     ssl: NODE_ENV === "production" ? { rejectUnauthorized: false } : false, //Heroku-specific setting
 });
+
 
 //MIDDLEWARE
 app.use(express.static('static')); //static routes
